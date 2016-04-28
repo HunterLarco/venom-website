@@ -21,10 +21,10 @@ class EmailHandler(webapp2.RequestHandler):
   def get(self):
     visitors = DemoDayVisitor.query()
     dumps = map(lambda visitor: visitor.to_dict(), visitors)
-    self.response.write({
+    self.response.write(json.dumps({
       'success': True,
       'visitors': dumps
-    })
+    }))
   
   def post(self):
     try:
@@ -35,14 +35,14 @@ class EmailHandler(webapp2.RequestHandler):
       key = ndb.Key('DemoDayVisitor', email)
       visitor = DemoDayVisitor(email=email, company=company, key=key)
       visitor.put()
-      self.response.write({
+      self.response.write(json.dumps({
         'success': True,
         'visitor': visitor.to_dict()
-      })
+      }))
     except:
-      self.response.write({
+      self.response.write(json.dumps({
         'success': False
-      })
+      }))
   
   def put(self):
     try:
@@ -53,14 +53,14 @@ class EmailHandler(webapp2.RequestHandler):
       company = body['company'] if 'company' in body else None
       visitor.company = company
       visitor.put()
-      self.response.write({
+      self.response.write(json.dumps({
         'success': True,
         'visitor': visitor.to_dict()
-      })
+      }))
     except:
-      self.response.write({
+      self.response.write(json.dumps({
         'success': False
-      })
+      }))
 
 
 class DefaultHandler(webapp2.RequestHandler):
