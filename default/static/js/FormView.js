@@ -50,7 +50,8 @@
 			$.ajax({
 				type: 'POST',
 				url: this.$element.attr('action'),
-				data: data
+				data: data,
+				dataType: 'json'
 			}).done(function (response) {
 				_this.onPostDone(response, data);
 			});
