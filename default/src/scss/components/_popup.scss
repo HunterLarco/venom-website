@@ -1,0 +1,27 @@
+.popup {
+	position: absolute;
+	left: 50%;
+	z-index: 99;
+	margin-left: -240px;
+	padding: 40px;
+	width: 480px;
+	border-radius: 0 0 10px 10px;
+	background: $color-tint;
+	box-shadow: 0 5px 40px rgba(0,0,0,0.6);
+	text-align: center;
+
+	span {
+		font-weight: 600;
+	}
+}
+
+.popup.is-hidden {
+	@include transform(translateY(-150%));
+}
+
+.popup__title {
+}
+
+.popup__description {
+	opacity: 0.6;
+}

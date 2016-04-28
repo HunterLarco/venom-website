@@ -5,20 +5,19 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-# APP SCRIPT
-- url: .*
-  script: app.app
 
 # STATIC DIRECTORIES
-- url: /images
-  static_dir: images
-- url: /resources
-  static_dir: resources
+- url: /static
+  static_dir: static
 
 # APP STATS
 - url: /stats(/.*)?
   script: google.appengine.ext.appstats.ui.app
   login: admin
+
+# APP SCRIPT
+- url: .*
+  script: app.app
 
 # LIBRARIES
 libraries:

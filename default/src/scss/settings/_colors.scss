@@ -1,5 +1,6 @@
 // Descriptive colors
 
+$color-tint: rgb(240,240,240);
 $color-black: #000;
 $color-white: #fff;
 $color-grey: shade($color-white, 30%);
@@ -7,7 +8,11 @@ $color-grey: shade($color-white, 30%);
 // Functional Colors
 
 $color-bodytext: $color-black;
-$color-primary: #249A79;
+
+
+$color-primary-dark: #240349;
+$color-primary-light: #40c8ea;
+$color-primary: $color-primary-light;
 
 // Social colors
 

@@ -1,21 +1,36 @@
 .hero {
-	display: table;
-	min-height: 500px;
+	@include background-image(linear-gradient($color-primary-dark, $color-primary-light));
+	overflow: hidden;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
+	color: white;
+	// height: 100%;
 	text-align: center;
+	-webkit-font-smoothing: antialiased;
 
 	@include media($range-palm, $range-hand-l) {
 		margin-top: 120px;
 	}
+
+	@include media($range-palm, false) {
+		min-height: 900px;
+	}
+}
+
+.hero__logo {
+	height: 229px;
 }
 
 .hero__inner {
-	display: table-cell;
 
 	@include media($range-lap, false) {
-		vertical-align: middle;
 	}
+}
+
+.hero__logo__image {
+	margin-top: 60px;
+	margin-bottom: 20px;
+	width: 150px;
 }
 
 .hero__header {
@@ -23,8 +38,9 @@
 }
 
 .hero__title {
-	text-transform: uppercase;
-	font-family: $font-family-condensed;
+	color: white;
+	font-family: $font-family-sans-serif;
+	font-weight: $font-weight-90;
 
 	@include media($range-palm) {
 		font-size: $font-size-300;
@@ -48,14 +64,16 @@
 	}
 
 	@include media($range-desk) {
-		font-size: $font-size-800;
+		font-size: $font-size-600;
 		line-height: $line-height-100;
 	}
 }
 
 .hero__sub-title {
-	color: $color-grey;
-	font-size: $font-size-200;
+	color: rgba(255,255,255,0.7);
+	font-size: $font-size-300;
+	font-weight: $font-weight-100;
+	line-height: $line-height-200;
 
 	@include media($range-palm, $range-hand-m) {
 		font-size: $font-size-100;
@@ -73,8 +91,19 @@
 }
 
 .hero__content {
+	@include font-smoothing(true);
+	margin: 0 auto;
+	max-width: 50em;
 
 	@include media($range-lap, false) {
-		margin-bottom: 60px;
+		margin-bottom: 20px;
 	}
+}
+
+.hero__screenshot {
+	max-width: 100%;
+}
+
+.hero__screenshot__image {
+	width: 100%;
 }

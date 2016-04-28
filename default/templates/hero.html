@@ -1,0 +1,33 @@
+
+<div class="popup js-popup is-hidden">
+	<h2 class="popup__title"><span class="js-popup__email">example@email.com</span> is added to the list!</h2>
+	<p class="popup__description">We will keep you in the loop about Venom</p>
+</div>
+
+<section class="hero">
+	<div class="inner hero__inner">
+		<figure class="hero__logo">
+			<img class="hero__logo__image" src="/static/images/venom--white.svg" />
+		</figure>
+		<div class="hero__content">
+			<h1 class="hero__title">The most advanced API development toolchain</h1>
+			<h2 class="hero__sub-title">PyVenom is a powerful open-source API framework built on Google App Engine. Venom IDE makes working with PyVenom projects a breeze. Together they form the Venom toolchain that makes scaleable API development quick and easy.</h2>
+		</div>
+		<form action="/api/v1/emails" method="POST" class="form js-notify-form">
+			<div class="message js-notify-form__message pane pane" style="display: none;">
+				<p>Oops, This email looks invalid. Please enter a valid email.</p>
+			</div>
+
+			<div class="form-row pane">
+				<div class="input-group">
+					<input type="email" id="email" name="email" placeholder="your@email.com" class="js-notify-form__email-input input-group__input input input--text">
+					<button class="input-group__button" type="submit">Notify Me</button>
+				</div>
+				<p class="input-group-sub-text">enter you email to receive updates about the product</p>
+			</div>
+		</form>
+		<figure class="hero__screenshot">
+			<img class="hero__screenshot__image" src="/static/images/screenshot--optimized.png" />
+		</figure>
+	</div>
+</section>
