@@ -1,0 +1,80 @@
+.hero {
+	display: table;
+	min-height: 500px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	@include media($range-palm, $range-hand-l) {
+		margin-top: 120px;
+	}
+}
+
+.hero__inner {
+	display: table-cell;
+
+	@include media($range-lap, false) {
+		vertical-align: middle;
+	}
+}
+
+.hero__header {
+	margin-bottom: 10px;
+}
+
+.hero__title {
+	text-transform: uppercase;
+	font-family: $font-family-condensed;
+
+	@include media($range-palm) {
+		font-size: $font-size-300;
+		font-weight: $font-weight-400;
+		line-height: $line-height-100;
+	}
+
+	@include media($range-hand) {
+		font-size: $font-size-500;
+		line-height: $line-height-100;
+	}
+
+	@include media($range-lap-s) {
+		font-size: $font-size-600;
+		line-height: $line-height-100;
+	}
+
+	@include media($range-lap-m, $range-lap-l) {
+		font-size: $font-size-700;
+		line-height: $line-height-100;
+	}
+
+	@include media($range-desk) {
+		font-size: $font-size-800;
+		line-height: $line-height-100;
+	}
+}
+
+.hero__sub-title {
+	color: $color-grey;
+	font-size: $font-size-200;
+
+	@include media($range-palm, $range-hand-m) {
+		font-size: $font-size-100;
+		line-height: $line-height-100;
+
+		br {
+			display: none;
+		}
+	}
+
+	@include media($range-hand-l) {
+		font-size: $font-size-100;
+		line-height: $line-height-100;
+	}
+}
+
+.hero__content {
+
+	@include media($range-lap, false) {
+		margin-bottom: 60px;
+	}
+}
