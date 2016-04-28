@@ -1,0 +1,25 @@
+// Descriptive colors
+
+$color-tint: rgb(240,240,240);
+$color-black: #000;
+$color-white: #fff;
+$color-grey: shade($color-white, 30%);
+
+// Functional Colors
+
+$color-bodytext: $color-black;
+
+
+$color-primary-dark: #240349;
+$color-primary-light: #40c8ea;
+$color-primary: $color-primary-light;
+
+// Social colors
+
+$color-facebook: #3b5998;
+$color-twitter: #00a0d1;
+$color-linkedin: #0e76a8;
+$color-youtube: #c4302b;
+$color-pinterest: #c8232c;
+$color-instagram: #3f729b;
+$color-googleplus: #db4a39;

@@ -1,0 +1,105 @@
+.content {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		text-transform: uppercase;
+		font-family: $font-family-condensed;
+
+		+ p {
+			margin-top: 0;
+		}
+	}
+
+	h1,
+	.h1 {
+		font-size: $font-size-900;
+		line-height: $line-height-70;
+
+		@include media(0, $range-hand) {
+			font-size: $font-size-700;
+		}
+	}
+
+	h2,
+	.h2 {
+		font-size: $font-size-600;
+		line-height: $line-height-100;
+	}
+
+	h3,
+	.h3 {
+		font-size: $font-size-500;
+		line-height: $line-height-200;
+	}
+
+	h4,
+	.h4 {
+		font-size: $font-size-100;
+		line-height: $line-height-300;
+	}
+
+	h5,
+	.h5 {
+		font-size: $font-size-90;
+		line-height: $line-height-400;
+	}
+
+	h6,
+	.h6 {
+		font-size: $font-size-80;
+		line-height: $line-height-500;
+	}
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-family-sans-serif;
+}
+
+.h1 {
+	font-size: $font-size-600;
+	line-height: $line-height-70;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-500;
+	}
+}
+
+.h2 {
+	font-size: $font-size-400;
+	line-height: $line-height-100;
+}
+
+.h3 {
+	font-size: $font-size-200;
+	line-height: $line-height-200;
+}
+
+.h4 {
+	font-size: $font-size-100;
+	line-height: $line-height-300;
+}
+
+.h5 {
+	font-size: $font-size-90;
+	line-height: $line-height-400;
+}
+
+.h6 {
+	font-size: $font-size-80;
+	line-height: $line-height-500;
+}

@@ -1,0 +1,26 @@
+.inner {
+	@include clearfix;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1580px;
+
+	@include media($range-palm, $range-hand) {
+		padding: 0 5%;
+	}
+
+	@include media($range-lap) {
+		padding: 0 8%;
+	}
+
+	@include media($range-desk) {
+		padding: 0 120px;
+	}
+}
+
+.inner--full-width-on-mobile {
+
+	@include media($range-palm) {
+		padding: 0;
+	}
+}

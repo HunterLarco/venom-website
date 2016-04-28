@@ -1,0 +1,19 @@
+.page-header {
+	position: relative;
+	z-index: 1;
+	display: block;
+	height: auto;
+	// kind of a hack
+	border-bottom: 1px solid tint($color-black, 25%);
+
+	@include media($range-palm, false) {
+		position: absolute;
+		display: table-row;
+		width: 100%;
+		height: 90px;
+	}
+}
+
+.page-header__logo {
+	margin: 20px auto;
+}

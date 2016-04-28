@@ -1,0 +1,61 @@
+.input-group {
+	@include clearfix;
+}
+
+.input-group__input {
+	display: block;
+	float: left;
+	padding: 6px 12px;
+	width: 65%;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: $font-size-200;
+	line-height: 40px;
+
+	@include media($range-palm, $range-hand-s) {
+		margin-top: 5px;
+		width: 100%;
+		border-radius: 5px;
+		font-size: $font-size-100;
+		line-height: 32px;
+	}
+}
+
+.input-group__button {
+	display: block;
+	float: left;
+	padding: 6px 12px;
+	width: 35%;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: $color-primary;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: $font-size-90;
+	font-weight: $font-weight-200;
+	line-height: 40px;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:active {
+		background-color: tint($color-primary, 15%);
+	}
+
+	@include media($range-palm, $range-hand-s) {
+		margin-top: 10px;
+		width: 100%;
+		border-radius: 5px;
+		line-height: 32px;
+	}
+}
+
+.input-group-sub-text {
+	margin-top: 0.5em;
+	color: white;
+	font-weight: $font-weight-90;
+}

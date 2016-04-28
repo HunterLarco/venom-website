@@ -1,0 +1,19 @@
+.pane {
+	@include clearfix;
+	position: relative;
+}
+
+.pane--black {
+	@include font-smoothing(on);
+	background-color: $color-black;
+	color: white;
+}
+
+.pane--centered {
+	text-align: center;
+}
+
+.pane--vertical-offset {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
